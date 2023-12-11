@@ -739,7 +739,7 @@ async function main() {
         // location.href,
         // params.get("url") || "train.splat",
         // "https://huggingface.co/cakewalk/splat-data/resolve/main/",
-        "https://huggingface.co/cakewalk/splat-data/tree/main/",
+        "https://huggingface.co/shuooru/webglsplat/resolve/main/nike.splat",
     );
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
