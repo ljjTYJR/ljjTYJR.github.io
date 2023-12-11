@@ -675,8 +675,8 @@ void main () {
     mat3 Vrk = mat3(u1.x, u1.y, u2.x, u1.y, u2.y, u3.x, u2.x, u3.x, u3.y);
 
     mat3 J = mat3(
-        focal.x / cam.z, 0., -(focal.x * cam.x) / (cam.z * cam.z), 
-        0., -focal.y / cam.z, (focal.y * cam.y) / (cam.z * cam.z), 
+        focal.x / cam.z, 0., -(focal.x * cam.x) / (cam.z * cam.z),
+        0., -focal.y / cam.z, (focal.y * cam.y) / (cam.z * cam.z),
         0., 0., 0.
     );
 
@@ -697,8 +697,8 @@ void main () {
 
     vec2 vCenter = vec2(pos2d) / pos2d.w;
     gl_Position = vec4(
-        vCenter 
-        + position.x * majorAxis / viewport 
+        vCenter
+        + position.x * majorAxis / viewport
         + position.y * minorAxis / viewport, 0.0, 1.0);
 
 }
@@ -737,8 +737,9 @@ async function main() {
     const url = new URL(
         // "nike.splat",
         // location.href,
-        params.get("url") || "train.splat",
-        "https://huggingface.co/cakewalk/splat-data/resolve/main/",
+        // params.get("url") || "train.splat",
+        // "https://huggingface.co/cakewalk/splat-data/resolve/main/",
+        "https://huggingface.co/cakewalk/splat-data/tree/main/",
     );
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
